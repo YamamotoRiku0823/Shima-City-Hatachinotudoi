@@ -61,4 +61,29 @@ body {
     padding: 1rem;
     font-size: 0.9rem;
   }
-  
+
+  /* ナビバー */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.nav-links a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #0077cc;
+}

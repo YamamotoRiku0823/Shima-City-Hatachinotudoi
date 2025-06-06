@@ -35,8 +35,12 @@ a {
 }
 
 .nav-links {
+  display: none;
+}
+
+.nav-links.active {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
 }
 
 .menu-toggle {
@@ -79,6 +83,7 @@ footer {
 
   .nav-links.active {
     display: flex;
+    flex-direction: column;
   }
 
   .menu-toggle {

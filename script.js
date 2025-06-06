@@ -1,17 +1,24 @@
-// ハンバーガーメニュー開閉
 const toggleBtn = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
-const closeBtn = document.querySelector('.close-menu');
 
-toggleBtn.addEventListener('click', () => {
+// メニュー開閉トグル
+toggleBtn.addEventListener('click', (event) => {
+  event.stopPropagation(); // 他のクリックで閉じないように
   navLinks.classList.toggle('active');
 });
 
-closeBtn.addEventListener('click', () => {
-  navLinks.classList.remove('active');
+// メニュー外クリックで閉じる
+document.addEventListener('click', (event) => {
+  if (
+    navLinks.classList.contains('active') &&
+    !navLinks.contains(event.target) &&
+    !toggleBtn.contains(event.target)
+  ) {
+    navLinks.classList.remove('active');
+  }
 });
 
-// メニュー内のリンクをクリックしたとき、自動でメニューを閉じる
+// リンククリックでメニューを閉じる（スマホ用）
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('active');

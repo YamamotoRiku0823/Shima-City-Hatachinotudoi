@@ -9,9 +9,9 @@ body {
 
 /* 中央寄せの共通コンテナ */
 .container {
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 3rem;
   text-align: left; /* ← 左揃え */
 }
 

@@ -1,4 +1,4 @@
-/* 基本リセット */
+/* リセットと基本スタイル */
 body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
@@ -7,27 +7,34 @@ body {
   background-color: #f9f9f9;
 }
 
+/* 中央寄せの共通コンテナ */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: left; /* ← 左揃え */
+}
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* ヘッダーとナビゲーション */
+/* ヘッダー */
 .hero {
   background: linear-gradient(to right, #6fb1fc, #4364f7);
   color: white;
   padding: 2rem 1rem;
-  text-align: center;
-  position: relative;
+  text-align: left; /* ← 左揃え */
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1000px;
-  margin: auto;
   padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .logo {
@@ -44,12 +51,10 @@ a {
   z-index: 1001;
 }
 
-/* デフォルトではナビゲーション非表示 */
 .nav-links {
   display: none;
 }
 
-/* メニュー開いたときに表示される */
 .nav-links.active {
   display: flex;
   flex-direction: column;
@@ -62,21 +67,25 @@ a {
   z-index: 1000;
 }
 
-/* 各リンク */
 .nav-links a {
   margin: 0.5rem 0;
   color: white;
+  text-align: left;
 }
 
-/* セクションとフッター */
+/* セクション */
 section {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem;
   background-color: white;
   border-radius: 8px;
+  padding: 1rem;
+  margin: 2rem auto;
 }
 
+section h2, section p, section ul {
+  text-align: left;
+}
+
+/* フッター */
 footer {
   text-align: center;
   padding: 1rem;

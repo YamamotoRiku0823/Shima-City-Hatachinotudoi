@@ -20,3 +20,18 @@ document.getElementById('next').addEventListener('click', () => {
   current = (current + 1) % slides.length;
   showSlide(current);
 });
+
+// メニューの開閉
+const toggleBtn = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+toggleBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+// メニュー内リンククリックで自動で閉じる
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
+});

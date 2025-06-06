@@ -24,6 +24,7 @@ document.getElementById('next').addEventListener('click', () => {
 // メニューの開閉
 const toggleBtn = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
+const closeBtn = document.querySelector('.close-menu');
 
 toggleBtn.addEventListener('click', () => {
   navLinks.classList.toggle('active');

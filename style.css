@@ -99,6 +99,11 @@ footer {
     display: none;
   }
 
+  .container {
+    padding: 0 1.5rem;
+    max-width: 90%;
+  }
+
   .nav-links {
     display: flex !important;
     flex-direction: row;

@@ -41,52 +41,5 @@ a {
 .nav-links.active {
   display: flex;
   flex-direction: column;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: white;
-}
-
-/* セクション */
-section {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem;
-  background-color: white;
-  border-radius: 8px;
-}
-
-/* フッター */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #eee;
-  color: #555;
-}
-
-/* レスポンシブ対応 */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #6fb1fc;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    padding: 1rem;
-    border-radius: 8px;
-  }
-
-  .nav-links.active {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-}
+  align-items: flex-start;
+  gap: 0.5r

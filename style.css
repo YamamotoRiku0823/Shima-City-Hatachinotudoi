@@ -1,4 +1,4 @@
-/* リセットと基本スタイル */
+/* 基本リセット */
 body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
@@ -12,12 +12,13 @@ a {
   color: inherit;
 }
 
-/* ヘッダー */
+/* ヘッダーとナビゲーション */
 .hero {
   background: linear-gradient(to right, #6fb1fc, #4364f7);
   color: white;
   padding: 2rem 1rem;
   text-align: center;
+  position: relative;
 }
 
 .navbar {
@@ -34,12 +35,71 @@ a {
   font-weight: bold;
 }
 
+.menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* デフォルトではナビゲーション非表示 */
 .nav-links {
   display: none;
 }
 
+/* メニュー開いたときに表示される */
 .nav-links.active {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5r
+  background-color: #6fb1fc;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  padding: 1rem;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+/* 各リンク */
+.nav-links a {
+  margin: 0.5rem 0;
+  color: white;
+}
+
+/* セクションとフッター */
+section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #eee;
+  color: #555;
+}
+
+/* レスポンシブ対応 */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    background: none;
+    padding: 0;
+  }
+
+  .nav-links a {
+    margin-left: 1rem;
+    color: white;
+  }
+}
